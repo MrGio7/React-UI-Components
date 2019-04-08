@@ -1,1 +1,23 @@
 /* All styles for your Card Components live here */
+.cardContainer {
+    margin:0 50px;
+    padding-left: 20px;
+}
+
+.bg img{
+    width: 75%;
+    margin-left: 15%;
+    border-radius: 10px 10px 0 0;
+}
+
+.cardContent {
+    border: 1px solid rgb(219, 209, 209);
+    border-radius: 10px;
+    width: 73%;
+    margin-left: 15%;
+    padding-left: 15px;
+}
+
+span {
+    color: gray;
+}
