@@ -1,1 +1,10 @@
 /* All styles for your header Components live here */
+.HeaderContainer{
+    display: flex;
+    margin:0 50px;
+}
+
+.logo img{
+    margin-top: 24px;
+    height: 70px;
+}
