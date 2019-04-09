@@ -1,0 +1,11 @@
+.display{
+
+}
+
+.display input{
+    background-color:#4f5154;
+    font-size: 2rem;
+    color: white;
+    text-align: end;
+    padding: 15px 10px;
+}
