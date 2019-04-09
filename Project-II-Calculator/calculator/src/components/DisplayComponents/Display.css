@@ -1,0 +1,8 @@
+.display input{
+    background-color:#4f5154;
+    font-size: 2rem;
+    color: white;
+    text-align: end;
+    padding: 25px 10px;
+    border: 2px solid gray;
+}
