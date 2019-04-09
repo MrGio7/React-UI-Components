@@ -1,4 +1,32 @@
-.buttons{
+.btns{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn{
+    width: 100%;
+    padding: 23px 43px;
+
+    background-color: white;
+    border: 1px solid gray;
+
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+
+
+.numberBtns .board-row{
+display: flex;
+}
+
+
+.functionBtns .board-row{
     display: flex;
     flex-direction: column;
+}
+
+.functionBtns .board-row .btn{
+    background-color: rgb(173, 5, 5);
+    color:white;
 }
