@@ -1,12 +1,15 @@
 import React from 'react';
 import './Display.css';
 
-const CalculatorDisplay = () => {
+class CalculatorDisplay extends React.Component {
+
+    render(){
     return(
         <div className='display'>
-            <input className='textview'></input>
+        <p>{this.props.result}</p>
         </div>
     )
+}
 }
 
 export default CalculatorDisplay;
