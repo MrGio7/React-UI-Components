@@ -1,54 +1,64 @@
 import React from 'react';
 import './Button.css';
-import ActionButton from './ActionButton';
 
-function renderActionButton(i) {
-    return <ActionButton value={i} />
+class NumberButton extends React.Component{
+    constructor(props){
+        super()
+    }
+
+    buttonPressed = i => {
+        this.props.buttonPressed(i.target.name)
+    }
+
+     renderActionButton = i => {
+        return  <button className='btn' name={i} onClick={this.buttonPressed}>{i}</button>
 };
 
-const NumberButton = () =>{
-    return(
-        <div className='btns'>
+    render(){
+        return(
+            <div className='btns'>
             <div className='numberBtns'>   
                 <div className="board-row">
-                    {renderActionButton('clear')}
+                    {this.renderActionButton('clear')}
                 </div>
 
                 <div className="board-row">
-                    {renderActionButton(7)}
-                    {renderActionButton(8)}
-                    {renderActionButton(9)}
+                    {this.renderActionButton(7)}
+                    {this.renderActionButton(8)}
+                    {this.renderActionButton(9)}
                 </div>
 
                 <div className="board-row">
-                    {renderActionButton(4)}
-                    {renderActionButton(5)}
-                    {renderActionButton(6)}
+                    {this.renderActionButton(4)}
+                    {this.renderActionButton(5)}
+                    {this.renderActionButton(6)}
                 </div>
 
                 <div className="board-row">
-                    {renderActionButton(1)}
-                    {renderActionButton(2)}
-                    {renderActionButton(3)}
+                    {this.renderActionButton(1)}
+                    {this.renderActionButton(2)}
+                    {this.renderActionButton(3)}
                 </div>
 
                 <div className="board-row">
-                    {renderActionButton(0)}
+                    {this.renderActionButton(0)}
             </div>
             
             </div>
 
             <div className='functionBtns'>
                 <div className="board-row">
-                    {renderActionButton('÷')}
-                    {renderActionButton('X')}
-                    {renderActionButton('-')}
-                    {renderActionButton('+')}
-                    {renderActionButton('=')}
+                    {this.renderActionButton('/')}
+                    {this.renderActionButton('*')}
+                    {this.renderActionButton('-')}
+                    {this.renderActionButton('+')}
+                    {this.renderActionButton('=')}
                 </div>
             </div>
         </div>
-    )
+        )
+    }
 }
+
 
 export default NumberButton;

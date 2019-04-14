@@ -1,6 +1,7 @@
 .btns{
     display: flex;
     flex-direction: row;
+    
 }
 
 .btn{
@@ -29,4 +30,5 @@ display: flex;
 .functionBtns .board-row .btn{
     background-color: rgb(173, 5, 5);
     color:white;
+    cursor: pointer;
 }

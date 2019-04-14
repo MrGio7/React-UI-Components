@@ -1,12 +1,16 @@
 import React from 'react';
 import './Button.css';
 
-function ActionButton(props) {
-    return(
-        <button className='btn'>
-        {props.value}
-        </button>
-    )
+
+class ActionButton extends React.Component{
+
+    render(){
+        return(
+            <button className='btn' >
+            {this.props.value}
+            </button>
+        )
+    }
 }
 
 export default ActionButton;
