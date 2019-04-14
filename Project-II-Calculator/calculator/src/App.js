@@ -14,8 +14,25 @@ class App extends React.Component {
   }
 
   buttonPressed = i =>{
+    if(i === '='){
+      this.calculate()
+    } else if(i === 'clear') {
+      this.clear()
+    } else
     this.setState({
-      result: i
+      result: this.state.result + i
+    })
+  }
+
+  clear = () =>{
+    this.setState({
+      result: ''
+    })
+  }
+
+  calculate = () =>{
+    this.setState({
+      result: eval(this.state.result)
     })
   }
 

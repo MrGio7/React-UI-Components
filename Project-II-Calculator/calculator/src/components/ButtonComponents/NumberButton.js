@@ -1,6 +1,5 @@
 import React from 'react';
 import './Button.css';
-import ActionButton from './ActionButton';
 
 class NumberButton extends React.Component{
     constructor(props){
@@ -8,11 +7,11 @@ class NumberButton extends React.Component{
     }
 
     buttonPressed = i => {
-        this.props.buttonPressed(i.target.result)
+        this.props.buttonPressed(i.target.name)
     }
 
      renderActionButton = i => {
-        return <ActionButton value={i} onClick={this.buttonPressed} />
+        return  <button className='btn' name={i} onClick={this.buttonPressed}>{i}</button>
 };
 
     render(){
@@ -49,8 +48,8 @@ class NumberButton extends React.Component{
 
             <div className='functionBtns'>
                 <div className="board-row">
-                    {this.renderActionButton('÷')}
-                    {this.renderActionButton('X')}
+                    {this.renderActionButton('/')}
+                    {this.renderActionButton('*')}
                     {this.renderActionButton('-')}
                     {this.renderActionButton('+')}
                     {this.renderActionButton('=')}
