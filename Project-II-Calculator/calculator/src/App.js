@@ -1,16 +1,33 @@
 import React from 'react';
 import './App.css';
+import './components/ButtonComponents/Button.css';
 import CalculatorDisplay from './components/DisplayComponents/CalculatorDisplay';
-import ActionButton from './components/ButtonComponents/ActionButton';
 import NumberButton from './components/ButtonComponents/NumberButton';
 
-const App = () => {
+class App extends React.Component {
+  constructor(props){
+    super(props)
+    
+    this.state = {
+      result: ''
+    }
+  }
+
+  buttonPressed = i =>{
+    this.setState({
+      result: i
+    })
+  }
+
+
+  render(){
   return (
     <div className='mainContainer'>
-      <CalculatorDisplay />
-      <NumberButton />
+      <CalculatorDisplay  result={this.state.result}/>
+      <NumberButton  buttonPressed={this.buttonPressed} />
     </div>
   );
+}
 };
 
 export default App;
